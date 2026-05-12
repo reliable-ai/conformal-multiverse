@@ -21,7 +21,7 @@ Our results show that (1) design decisions can affect uncertainty outcomes for s
 
 This project is an extension of the [Master's thesis](https://github.com/jsbroden/CMA_Fairness) with the same title, by Julia Sophie Broden, supervised by Christoph Kern.
 
-Both the thesis and Tthis repository build on the code from the paper [One Model Many Scores: Using Multiverse Analysis to Prevent Fairness Hacking and Evaluate the Influence of Model Design Decisions](https://dl.acm.org/doi/10.1145/3630106.3658974) by Jan Simson, Florian Pfisterer and Christoph Kern, published in the proceedings of the ACM Conference on Fairness, Accountability, and Transparency 2024 in Rio de Janeiro, Brazil in June 2024. We adapted their framework to our setting of Conformal Multiverse Analysis (CMA).
+Both the thesis and this repository build on the code from the paper [One Model Many Scores: Using Multiverse Analysis to Prevent Fairness Hacking and Evaluate the Influence of Model Design Decisions](https://dl.acm.org/doi/10.1145/3630106.3658974) by Jan Simson, Florian Pfisterer and Christoph Kern, published in the proceedings of the ACM Conference on Fairness, Accountability, and Transparency 2024 in Rio de Janeiro, Brazil in June 2024. We adapted their framework to our setting of Conformal Multiverse Analysis (CMA).
 
 ## Setup
 
@@ -29,14 +29,14 @@ This project uses [uv](https://docs.astral.sh/uv/). To install dependencies, fir
 
 ## Organization & Structure
 
-The project is organized into two main analysies, both predicting long-term unemployment (LTU) using conformal prediction. One analysis predicts LTU in binary fashion while the other does so in a more nuanced, multiclass way.
+The project is organized into two main analyses, both predicting long-term unemployment (LTU) using conformal prediction. One analysis predicts LTU in binary fashion while the other does so in a more nuanced, multiclass way.
 
-The binary outcome analysis is located in the root of the project, while the multiclass analysis is located in the `multiclass/` directory. The file organization between the two analysis is very similar, however.
+The binary outcome analysis is located in the root of the project, while the multiclass analysis is located in the `multiclass/` directory. The file organization between the two analyses is very similar, however.
 
-- `universe_analysis.ipynb`: The universe analysis scripts describe the universes and actual prediction problems to be analyzed. They are called multiple times with different settings to run the mulvierse analysis.
+- `universe_analysis.ipynb`: The universe analysis scripts describe the universes and actual prediction problems to be analyzed. They are called multiple times with different settings to run the multiverse analysis.
 - `/multiverse_analysis.py` / `multiclass/multiverse.py`: These two files specify the multiverse to be analyzed for the binary and multiclass prediction problems, specifically.
 - `output/` / `multiclass/output`: The output directories contain the outputs of the multiverse analyses and the results from analyzing their data.
-- `analysis_*.ipynb`: The analysis notebooks contain empirical analysis of the resutls from the multiverse analyses. Analysis notebooks between the binary and multiclass settings are highly similar.
+- `analysis_*.ipynb`: The analysis notebooks contain empirical analysis of the results from the multiverse analyses. Analysis notebooks between the binary and multiclass settings are highly similar.
 - `/fairness_multiverse/`: This directory contains auxiliary code used during analyses. It also contains the code to orchestrate the binary outcome analysis.
 
 ## Adapting to a New Use-Case
@@ -47,7 +47,7 @@ The binary-outcome analysis uses custom code to execute the multiverse analysis,
 
 ## Data
 
-This study makes use of the the [Sample of Integrated Labour Market Biographies (SIAB)](https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/) provided by the [German Institute for Employment Research (IAB)](https://iab.de/en).
+This study makes use of the [Sample of Integrated Labour Market Biographies (SIAB)](https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/) provided by the [German Institute for Employment Research (IAB)](https://iab.de/en).
 
 We are unfortunately not allowed to share the data used in the analysis due to data protection regulations. However, the data is available upon request from the [German Institute for Employment Research (IAB)](https://iab.de/en) for research purposes.
 
@@ -65,7 +65,7 @@ cd multiclass
 uv run -m multiversum
 ```
 
-Note: The original analysis used the default seed (i.e. the one the libraries default to if no seed is set). However, for train-test splits the seed 42 was used. When running the replication analaysis, we updated the code to use the global seed for the train-test splits as well. If you want to reproduce results from the paper, you will have to update the code to manually use 42 for train-test splits.
+Note: The original analysis used the default seed (i.e. the one the libraries default to if no seed is set). However, for train-test splits the seed 42 was used. When running the replication analysis, we updated the code to use the global seed for the train-test splits as well. If you want to reproduce results from the paper, you will have to update the code to manually use 42 for train-test splits.
 
 ## Re-running with different seeds
 
