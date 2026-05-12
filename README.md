@@ -1,5 +1,9 @@
 [[Paper]](https://doi.org/10.1145/3805689.3812391)
 
+[[Data]](https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/)
+
+[[Multiverse Library]](https://simson.io/multiversum/)
+
 # Conformal Prediction and the Many-Worlds of Fairness
 
 Julia Broden, Jan Simson, and Christoph Kern. 2026. Conformal Prediction and the Many-Worlds of Fairness. In The 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT ’26), June 25–28, 2026, Montreal, QC, Canada. ACM, New York, NY, USA, 25 pages. https://doi.org/10.1145/3805689.3812391
